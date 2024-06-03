@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|c:\\users\\daion\\desktop\\pz\\tboi\\thebindingofisaac\\thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|c:\\users\\daion\\desktop\\pz\\tboi\\thebindingofisaac\\library\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\tests\\charactertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\tests\\charactertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\isaac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\isaac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\magdalene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\magdalene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\judas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\judas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\tests\\itemtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\tests\\itemtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form1.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form1.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form1.cs",
+              "RelativeToolTip": "TheBindingOfIsaac\\Form1.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwDQAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T08:19:12.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Magdalene.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Magdalene.cs",
+              "RelativeDocumentMoniker": "Library\\Magdalene.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Magdalene.cs",
+              "RelativeToolTip": "Library\\Magdalene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T13:36:40.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Item.cs",
+              "RelativeDocumentMoniker": "Library\\Item.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Item.cs",
+              "RelativeToolTip": "Library\\Item.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwA8AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T12:15:06.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Character.cs",
+              "RelativeDocumentMoniker": "Library\\Character.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Character.cs",
+              "RelativeToolTip": "Library\\Character.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T10:02:31.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Isaac.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Isaac.cs",
+              "RelativeDocumentMoniker": "Library\\Isaac.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Isaac.cs",
+              "RelativeToolTip": "Library\\Isaac.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T10:02:24.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Judas.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Judas.cs",
+              "RelativeDocumentMoniker": "Library\\Judas.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Judas.cs",
+              "RelativeToolTip": "Library\\Judas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:59:15.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CharacterTests.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\CharacterTests.cs",
+              "RelativeDocumentMoniker": "Library\\Tests\\CharacterTests.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\CharacterTests.cs",
+              "RelativeToolTip": "Library\\Tests\\CharacterTests.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAIAwwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:40:08.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ItemTests.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\ItemTests.cs",
+              "RelativeDocumentMoniker": "Library\\Tests\\ItemTests.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\ItemTests.cs",
+              "RelativeToolTip": "Library\\Tests\\ItemTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:40:05.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form2.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form2.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form2.cs",
+              "RelativeToolTip": "TheBindingOfIsaac\\Form2.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAQwEQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T11:01:43.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Menu.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Menu.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Menu.cs",
+              "RelativeToolTip": "TheBindingOfIsaac\\Menu.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAQwI0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T09:22:51.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form3.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form3.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form3.cs",
+              "RelativeToolTip": "TheBindingOfIsaac\\Form3.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAiwD0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T11:01:54.301Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

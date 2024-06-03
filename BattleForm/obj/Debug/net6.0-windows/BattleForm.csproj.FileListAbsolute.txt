@@ -1,0 +1,7 @@
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\BattleForm\obj\Debug\net6.0-windows\BattleForm.csproj.AssemblyReference.cache
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\BattleForm\obj\Debug\net6.0-windows\BattleForm.Form1.resources
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\BattleForm\obj\Debug\net6.0-windows\BattleForm.csproj.GenerateResource.cache
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\BattleForm\obj\Debug\net6.0-windows\BattleForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\BattleForm\obj\Debug\net6.0-windows\BattleForm.AssemblyInfoInputs.cache
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\BattleForm\obj\Debug\net6.0-windows\BattleForm.AssemblyInfo.cs
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\BattleForm\obj\Debug\net6.0-windows\BattleForm.csproj.CoreCompileInputs.cache

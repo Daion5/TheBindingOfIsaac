@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheBindingOfIsaac", "TheBindingOfIsaac\TheBindingOfIsaac.csproj", "{ADB4679A-7869-48DD-B89C-FACB95FBC62E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Library\Library.csproj", "{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADB4679A-7869-48DD-B89C-FACB95FBC62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB4679A-7869-48DD-B89C-FACB95FBC62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB4679A-7869-48DD-B89C-FACB95FBC62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB4679A-7869-48DD-B89C-FACB95FBC62E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {204F7120-A4FA-45BA-ABB6-068BF69BC6B8}
+	EndGlobalSection
+EndGlobal
