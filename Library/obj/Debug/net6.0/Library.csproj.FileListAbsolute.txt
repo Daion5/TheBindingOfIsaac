@@ -97,3 +97,4 @@ C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\Library\bin\Debug\net6.0\zh-Han
 C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\Library\obj\Debug\net6.0\Library.csproj.AssemblyReference.cache
 C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\Library\obj\Debug\net6.0\Library.csproj.Up2Date
 C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\Library\obj\Debug\net6.0\Library.genruntimeconfig.cache
+C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\Library\obj\Debug\net6.0\Library.sourcelink.json

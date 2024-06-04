@@ -90,7 +90,6 @@ namespace TheBindingOfIsaac
             this.Controls.Add(startPanel);
 
             totalRoomsGenerated = 1;
-            paintedRoomIndex = random.Next(1, allowedRoomCount - 1);
             GenerateAdjacentRooms(startPanel);
         }
 
@@ -659,7 +658,7 @@ namespace TheBindingOfIsaac
             characterStatsForm.Text = "Character Stats";
 
             int yOffset = 10;
-            AddStatLabel("Name: " + character.Name, 10, yOffset, characterStatsForm);
+            AddStatLabel(character.Name, 10, yOffset, characterStatsForm);
             AddStatLabel("Strength: " + character.Strength, 10, yOffset += 25, characterStatsForm);
             AddStatLabel("Attack Speed: " + character.AttackSpeed, 10, yOffset += 25, characterStatsForm);
             AddStatLabel("Movement: " + character.MovementSpeed, 10, yOffset += 25, characterStatsForm);

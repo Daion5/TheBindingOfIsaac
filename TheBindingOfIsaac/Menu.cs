@@ -10,8 +10,12 @@ namespace TheBindingOfIsaac
         public class UserData
         {
             public int WinStreak { get; set; }
+            public int BestStreak { get; set; }
+            public int WorstStreak { get; set; }
         }
         public static int WinStreak { get; private set; } = 0;
+        public static int BestStreak { get; private set; } = 0;
+        public static int WorstStreak { get; private set; } = 0;
         private string userDataFolderPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\data";
         private void SaveUserData()
         {
@@ -19,7 +23,9 @@ namespace TheBindingOfIsaac
 
             UserData userData = new UserData
             {
-                WinStreak = WinStreak
+                WinStreak = WinStreak,
+                BestStreak = BestStreak,
+                WorstStreak = WorstStreak
             };
 
             string userDataFilePath = Path.Combine(userDataFolderPath, "userData.xml");
@@ -40,6 +46,8 @@ namespace TheBindingOfIsaac
                 {
                     UserData userData = (UserData)serializer.Deserialize(fileStream);
                     WinStreak = userData.WinStreak;
+                    BestStreak = userData.BestStreak;
+                    WorstStreak = userData.WorstStreak;
                 }
             }
         }
@@ -78,6 +86,10 @@ namespace TheBindingOfIsaac
                 {
                     WinStreak++;
                 }
+                if (WinStreak > BestStreak)
+                {
+                    BestStreak = WinStreak;
+                }
                 MessageBox.Show("You won!");
             }
             else
@@ -90,6 +102,10 @@ namespace TheBindingOfIsaac
                 {
                     WinStreak--;
                 }
+                if (WinStreak < WorstStreak)
+                {
+                    WorstStreak = WinStreak;
+                }
                 MessageBox.Show("You lost!");
             }
             Item.ResetItemList();
@@ -101,6 +117,31 @@ namespace TheBindingOfIsaac
         private void UpdateWinStreakLabel()
         {
             win_streak.Text = "WIN STREAK: " + WinStreak;
+            win_streak.MouseHover += new EventHandler(WinStreakLabel_MouseHover);
+        }
+
+        private void WinStreakLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.OwnerDraw = true;
+            toolTip.Draw += new DrawToolTipEventHandler(toolTip_Draw);
+
+            toolTip.SetToolTip(win_streak, $"BEST STREAK: {BestStreak}\nWORST STREAK: {WorstStreak}");
+        }
+        private void toolTip_Draw(object sender, DrawToolTipEventArgs e)
+        {
+            e.DrawBackground();
+            e.DrawBorder();
+
+            string text = e.ToolTipText;
+            string[] lines = text.Split('\n');
+            Font font = e.Font;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                Color color = i == 0 ? Color.DarkGreen : Color.Red;
+                e.Graphics.DrawString(lines[i], font, new SolidBrush(color), new PointF(2, 2 + (i * font.Height)));
+            }
         }
         private void InitializeListBoxes()
         {
