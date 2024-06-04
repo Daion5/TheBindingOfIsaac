@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|c:\\users\\daion\\desktop\\pz\\tboi\\thebindingofisaac\\thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form1.cs",
               "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form1.cs",
               "RelativeToolTip": "TheBindingOfIsaac\\Form1.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAC0AAAAhAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAqwC0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T08:19:12.694Z",
               "EditorCaption": ""
@@ -127,8 +127,7 @@
               "RelativeToolTip": "TheBindingOfIsaac\\Menu.cs",
               "ViewState": "AQIAAKgAAAAAAAAAAAAgwNEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:22:51.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T09:22:51.543Z"
             },
             {
               "$type": "Document",
