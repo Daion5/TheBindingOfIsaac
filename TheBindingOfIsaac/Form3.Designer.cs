@@ -38,7 +38,7 @@
             // 
             // pictureStone
             // 
-            pictureStone.Location = new Point(47, 154);
+            pictureStone.Location = new Point(57, 154);
             pictureStone.Name = "pictureStone";
             pictureStone.Size = new Size(146, 130);
             pictureStone.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // pictureItem
             // 
-            pictureItem.Location = new Point(47, 18);
+            pictureItem.Location = new Point(57, 18);
             pictureItem.Name = "pictureItem";
             pictureItem.Size = new Size(146, 130);
             pictureItem.TabIndex = 2;
@@ -54,7 +54,7 @@
             // 
             // btnYes
             // 
-            btnYes.Location = new Point(47, 290);
+            btnYes.Location = new Point(57, 290);
             btnYes.Name = "btnYes";
             btnYes.Size = new Size(146, 23);
             btnYes.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             // btnNo
             // 
-            btnNo.Location = new Point(47, 319);
+            btnNo.Location = new Point(57, 319);
             btnNo.Name = "btnNo";
             btnNo.Size = new Size(146, 23);
             btnNo.TabIndex = 4;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(242, 344);
+            ClientSize = new Size(261, 344);
             Controls.Add(btnNo);
             Controls.Add(btnYes);
             Controls.Add(pictureItem);

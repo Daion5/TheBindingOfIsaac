@@ -1,4 +1,5 @@
 ﻿using Library;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,12 +19,15 @@ namespace TheBindingOfIsaac
         private string itemsFolderPath;
         private bool itemTaken = false;
         public event EventHandler FormClosedEvent;
+        private IWavePlayer waveOutDevice;
+        private AudioFileReader audioFileReader;
         public Form3(Item item, Character character, string itemsFolderPath)
         {
             InitializeComponent();
             this.item = item;
             this.character = character;
             this.itemsFolderPath = itemsFolderPath;
+            this.Text = "Treasure Room";
 
             pictureItem.Image = Image.FromFile(Path.Combine(itemsFolderPath, item.Name.ToLower() + ".png"));
             pictureItem.BackColor = Color.Transparent;
@@ -45,9 +49,23 @@ namespace TheBindingOfIsaac
             btnNo.ForeColor = Color.Purple;
             btnNo.Font = new Font(btnNo.Font, FontStyle.Bold);
 
+            waveOutDevice = new WaveOut();
+            audioFileReader = new AudioFileReader(@"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\soundtrack\treasureRoom.mp3");
+            waveOutDevice.Init(audioFileReader);
+            waveOutDevice.Play();
+            audioFileReader.Volume = 0.2f;
+
+        }
+
+        private void StopMusic()
+        {
+            waveOutDevice.Stop();
+            waveOutDevice.Dispose();
+            waveOutDevice = new WaveOut();
         }
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
+            StopMusic();
             base.OnFormClosed(e);
             FormClosedEvent?.Invoke(this, new ItemTakenEventArgs(itemTaken));
         }
@@ -77,6 +95,26 @@ namespace TheBindingOfIsaac
                     break;
                 case "AttackSpeed":
                     character.AttackSpeed += 1;
+                    break;
+                case "MagicMushroom":
+                    character.MaxHealth += 20;
+                    character.Heal(30);
+                    character.Strength += 1;
+                    break;
+                case "BOGOBombs":
+                    character.Bombs += 5;
+                    break;
+                case "CursedPenny":
+                    character.Coins += 30;
+                    character.Luck -= 2;
+                    break;
+                case "MrBoom":
+                    character.Bombs += 1;
+                    character.BombDamage += 20;
+                    break;
+                case "Polyphemus":
+                    character.MovementSpeed = 0;
+                    character.Strength *= 2;
                     break;
             }
         }

@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|c:\\users\\daion\\desktop\\pz\\tboi\\thebindingofisaac\\thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|c:\\users\\daion\\desktop\\pz\\tboi\\thebindingofisaac\\thebindingofisaac\\classdiagramtboi.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\classdiagramtboi.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|c:\\users\\daion\\desktop\\pz\\tboi\\thebindingofisaac\\library\\classdiagramlibrary.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\classdiagramlibrary.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|c:\\users\\daion\\desktop\\pz\\tboi\\thebindingofisaac\\library\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\tests\\charactertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\tests\\charactertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\isaac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,20 +47,16 @@
       "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\magdalene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\thebindingofisaac\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADB4679A-7869-48DD-B89C-FACB95FBC62E}|TheBindingOfIsaac\\TheBindingOfIsaac.csproj|solutionrelative:thebindingofisaac\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\judas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\judas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\tests\\itemtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\tests\\itemtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\library\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD19B6F8-70BB-42A5-9CFA-E82088E218F1}|Library\\Library.csproj|solutionrelative:library\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,17 +66,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClassDiagramLibrary.cd",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\ClassDiagramLibrary.cd",
+              "RelativeDocumentMoniker": "Library\\ClassDiagramLibrary.cd",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\ClassDiagramLibrary.cd",
+              "RelativeToolTip": "Library\\ClassDiagramLibrary.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-07-03T12:20:20.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ClassDiagramTBOI.cd",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\ClassDiagramTBOI.cd",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\ClassDiagramTBOI.cd",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\ClassDiagramTBOI.cd",
+              "RelativeToolTip": "TheBindingOfIsaac\\ClassDiagramTBOI.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-07-03T12:20:16.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Menu.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Menu.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Menu.cs",
+              "RelativeToolTip": "TheBindingOfIsaac\\Menu.cs",
+              "ViewState": "AQIAAG4BAAAAAAAAAAAtwHsBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T11:15:47.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Isaac.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Isaac.cs",
+              "RelativeDocumentMoniker": "Library\\Isaac.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Isaac.cs",
+              "RelativeToolTip": "Library\\Isaac.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T12:35:22.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form1.cs",
               "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form1.cs",
               "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form1.cs",
               "RelativeToolTip": "TheBindingOfIsaac\\Form1.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAQwDQAAAA/AAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAcwCkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T08:19:12.694Z",
               "EditorCaption": ""
@@ -72,132 +134,118 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Magdalene.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Magdalene.cs",
-              "RelativeDocumentMoniker": "Library\\Magdalene.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Magdalene.cs",
-              "RelativeToolTip": "Library\\Magdalene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form3.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form3.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form3.cs",
+              "RelativeToolTip": "TheBindingOfIsaac\\Form3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T13:36:40.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Item.cs",
-              "RelativeDocumentMoniker": "Library\\Item.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Item.cs",
-              "RelativeToolTip": "Library\\Item.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwA8AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T12:15:06.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Character.cs",
-              "RelativeDocumentMoniker": "Library\\Character.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Character.cs",
-              "RelativeToolTip": "Library\\Character.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T10:02:31.214Z",
+              "WhenOpened": "2024-06-26T10:10:24.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Isaac.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Isaac.cs",
-              "RelativeDocumentMoniker": "Library\\Isaac.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Isaac.cs",
-              "RelativeToolTip": "Library\\Isaac.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form4.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form4.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form4.cs",
+              "RelativeToolTip": "TheBindingOfIsaac\\Form4.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAmwCcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T10:02:24.496Z",
+              "WhenOpened": "2024-06-25T13:03:17.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Judas.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Judas.cs",
-              "RelativeDocumentMoniker": "Library\\Judas.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Judas.cs",
-              "RelativeToolTip": "Library\\Judas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "DocumentIndex": 13,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Item.cs",
+              "RelativeDocumentMoniker": "Library\\Item.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Item.cs",
+              "RelativeToolTip": "Library\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:59:15.546Z",
+              "WhenOpened": "2024-06-17T17:20:51.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CharacterTests.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\CharacterTests.cs",
-              "RelativeDocumentMoniker": "Library\\Tests\\CharacterTests.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\CharacterTests.cs",
-              "RelativeToolTip": "Library\\Tests\\CharacterTests.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAIAwwBoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:40:08.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ItemTests.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\ItemTests.cs",
-              "RelativeDocumentMoniker": "Library\\Tests\\ItemTests.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Tests\\ItemTests.cs",
-              "RelativeToolTip": "Library\\Tests\\ItemTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:40:05.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form2.cs",
               "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form2.cs",
               "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form2.cs",
               "RelativeToolTip": "TheBindingOfIsaac\\Form2.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAQwEQAAAApAAAA",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAMwLQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T11:01:43.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Menu.cs",
-              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Menu.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Menu.cs",
-              "RelativeToolTip": "TheBindingOfIsaac\\Menu.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAQwI0AAAAJAAAA",
+              "DocumentIndex": 3,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Character.cs",
+              "RelativeDocumentMoniker": "Library\\Character.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Character.cs",
+              "RelativeToolTip": "Library\\Character.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAuwGkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:22:51.543Z",
+              "WhenOpened": "2024-06-27T09:58:43.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form3.cs",
-              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form3.cs",
-              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form3.cs",
-              "RelativeToolTip": "TheBindingOfIsaac\\Form3.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAiwD0AAAAJAAAA",
+              "DocumentIndex": 12,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Monster.cs",
+              "RelativeDocumentMoniker": "Library\\Monster.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Monster.cs",
+              "RelativeToolTip": "Library\\Monster.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwEsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T11:01:54.301Z",
+              "WhenOpened": "2024-06-26T19:18:32.148Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Magdalene.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Magdalene.cs",
+              "RelativeDocumentMoniker": "Library\\Magdalene.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Magdalene.cs",
+              "RelativeToolTip": "Library\\Magdalene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T12:35:42.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Judas.cs",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Judas.cs",
+              "RelativeDocumentMoniker": "Library\\Judas.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\Library\\Judas.cs",
+              "RelativeToolTip": "Library\\Judas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T10:19:52.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form4.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form4.cs",
+              "RelativeDocumentMoniker": "TheBindingOfIsaac\\Form4.cs",
+              "ToolTip": "C:\\Users\\Daion\\Desktop\\PZ\\TBOI\\TheBindingOfIsaac\\TheBindingOfIsaac\\Form4.cs [Design]",
+              "RelativeToolTip": "TheBindingOfIsaac\\Form4.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T12:44:52.933Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

@@ -42,6 +42,9 @@ namespace TheBindingOfIsaac
             listBoxJudas = new ListBox();
             listBoxMagdalene = new ListBox();
             win_streak = new Label();
+            btnSwapIsaac = new Button();
+            btnSwapJudas = new Button();
+            btnSwapMagdalene = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -154,11 +157,44 @@ namespace TheBindingOfIsaac
             win_streak.TabIndex = 13;
             win_streak.Text = "label";
             // 
+            // btnSwapIsaac
+            // 
+            btnSwapIsaac.Location = new Point(88, 399);
+            btnSwapIsaac.Name = "btnSwapIsaac";
+            btnSwapIsaac.Size = new Size(75, 23);
+            btnSwapIsaac.TabIndex = 14;
+            btnSwapIsaac.Text = "SWAP";
+            btnSwapIsaac.UseVisualStyleBackColor = true;
+            btnSwapIsaac.Click += btnSwapIsaac_Click;
+            // 
+            // btnSwapJudas
+            // 
+            btnSwapJudas.Location = new Point(439, 399);
+            btnSwapJudas.Name = "btnSwapJudas";
+            btnSwapJudas.Size = new Size(75, 23);
+            btnSwapJudas.TabIndex = 15;
+            btnSwapJudas.Text = "SWAP";
+            btnSwapJudas.UseVisualStyleBackColor = true;
+            btnSwapJudas.Click += btnSwapJudas_Click;
+            // 
+            // btnSwapMagdalene
+            // 
+            btnSwapMagdalene.Location = new Point(808, 399);
+            btnSwapMagdalene.Name = "btnSwapMagdalene";
+            btnSwapMagdalene.Size = new Size(75, 23);
+            btnSwapMagdalene.TabIndex = 16;
+            btnSwapMagdalene.Text = "SWAP";
+            btnSwapMagdalene.UseVisualStyleBackColor = true;
+            btnSwapMagdalene.Click += btnSwapMagdalene_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(967, 456);
+            Controls.Add(btnSwapMagdalene);
+            Controls.Add(btnSwapJudas);
+            Controls.Add(btnSwapIsaac);
             Controls.Add(win_streak);
             Controls.Add(listBoxMagdalene);
             Controls.Add(listBoxJudas);
@@ -215,5 +251,8 @@ namespace TheBindingOfIsaac
         private ListBox listBoxJudas;
         private ListBox listBoxMagdalene;
         private Label win_streak;
+        private Button btnSwapIsaac;
+        private Button btnSwapJudas;
+        private Button btnSwapMagdalene;
     }
 }

@@ -20,6 +20,17 @@ namespace Library
             new Item("Lucky_Foot", "Luck"),
             new Item("The_Belt", "MovementSpeed"),
             new Item("The_Sad_Onion", "AttackSpeed"),
+            new Item("Cursed_Penny", "CursedPenny"),
+            new Item("Mr._Boom", "MrBoom"),
+            new Item("Polyphemus", "Polyphemus"),
+        };
+
+        public static List<Item> AllShopItems = new List<Item>
+        {
+            new Item("BOGO_Bombs", "BOGOBombs"),
+            new Item("Champion_Belt", "Strength"),
+            new Item("Magic_Mushroom", "MagicMushroom"),
+            new Item("Supper", "MaxHealth"),
         };
 
         public Item(string name, string statBoost)
@@ -32,9 +43,15 @@ namespace Library
         {
             return $"{Name} (+{StatBoost})";
         }
+
         public static void RemoveItemFromList(Item item)
         {
             AllItems.Remove(item);
+        }
+
+        public static void RemoveShopItemFromList(Item item)
+        {
+            AllShopItems.Remove(item);
         }
 
         public static void ResetItemList()
@@ -44,16 +61,32 @@ namespace Library
                 item.IsTaken = false;
             }
         }
+
+        public static void ResetShopItemList()
+        {
+            foreach (var item in AllShopItems)
+            {
+                item.IsTaken = false;
+            }
+        }
+
         public static Item GetNextAvailableItem()
         {
             var availableItems = AllItems.Where(i => !i.IsTaken).ToList();
-
             if (availableItems.Count == 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
                 throw new NoMoreItemsException(" No more items to generate. ");
             }
+            return availableItems[new Random().Next(availableItems.Count)];
+        }
 
+        public static Item GetNextAvailableShopItem()
+        {
+            var availableItems = AllShopItems.Where(i => !i.IsTaken).ToList();
+            if (availableItems.Count == 0)
+            {
+                throw new Exception("No more items available in the shop.");
+            }
             return availableItems[new Random().Next(availableItems.Count)];
         }
     }

@@ -1,46 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Library.Isaac">
-    <Position X="2.5" Y="1.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Isaac.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Library.Item">
-    <Position X="5" Y="1.25" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQIAAEQAAAAAQAEAAAAEAAAIAAAAAAAAA=</HashCode>
-      <FileName>Item.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Library.Judas">
-    <Position X="2.5" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Judas.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Library.Magdalene">
-    <Position X="2.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Magdalene.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Library.Monster">
-    <Position X="2.5" Y="5.75" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAECAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
-      <FileName>Monster.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Library.Character">
-    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Position X="0.75" Y="0.5" Width="2.25" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
+      <Enum Name="Library.Character.DropHeartResult">
+        <TypeIdentifier>
+          <NewMemberFileName>Character.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
       <Enum Name="Library.Character.DropResult">
         <TypeIdentifier>
           <NewMemberFileName>Character.cs</NewMemberFileName>
@@ -48,19 +18,75 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>ARAAAAAAAAAgCACECAAACARAAMhAAAIAAAQAgAAAAAA=</HashCode>
+      <HashCode>KRgAQACEAAAgCACECAACCARAAthAAAIAAAQAgAABAAA=</HashCode>
       <FileName>Character.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Library.Isaac">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Isaac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Tainted_Isaac">
+    <Position X="5.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Isaac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Judas">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Judas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Tainted_Judas">
+    <Position X="5.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Judas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Magdalene">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Magdalene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Tainted_Magdalene">
+    <Position X="5.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Magdalene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Monster">
+    <Position X="3.5" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAECAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Item">
+    <Position X="7.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAQIAAEYAAIAAQAEAABAEAAAIAAAAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Library.Exceptions.MonsterNotFoundException">
-    <Position X="4.75" Y="5.75" Width="3.25" />
+    <Position X="5.75" Y="5.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Exceptions\MonsterNotFoundException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Library.Exceptions.NoMoreItemsException">
-    <Position X="6.75" Y="1.25" Width="3" />
+    <Position X="9.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Exceptions\NoMoreItemsException.cs</FileName>

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UserData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <WinStreak>1</WinStreak>
+  <BestStreak>16</BestStreak>
+  <WorstStreak>-26</WorstStreak>
+  <IsIsaacTaintedUnlocked>false</IsIsaacTaintedUnlocked>
+  <IsJudasTaintedUnlocked>true</IsJudasTaintedUnlocked>
+  <IsMagdaleneTaintedUnlocked>false</IsMagdaleneTaintedUnlocked>
 </UserData>

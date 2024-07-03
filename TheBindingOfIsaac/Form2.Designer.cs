@@ -35,6 +35,7 @@
             monsterName = new Label();
             progressBarCharacter = new ProgressBar();
             progressBarMonster = new ProgressBar();
+            btnBomb = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCharacter).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMonster).BeginInit();
             SuspendLayout();
@@ -97,11 +98,22 @@
             progressBarMonster.Size = new Size(100, 23);
             progressBarMonster.TabIndex = 6;
             // 
+            // btnBomb
+            // 
+            btnBomb.Location = new Point(150, 157);
+            btnBomb.Name = "btnBomb";
+            btnBomb.Size = new Size(75, 23);
+            btnBomb.TabIndex = 7;
+            btnBomb.Text = "button1";
+            btnBomb.UseVisualStyleBackColor = true;
+            btnBomb.Click += btnBomb_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(389, 227);
+            Controls.Add(btnBomb);
             Controls.Add(progressBarMonster);
             Controls.Add(progressBarCharacter);
             Controls.Add(monsterName);
@@ -127,5 +139,6 @@
         private Label monsterName;
         private ProgressBar progressBarCharacter;
         private ProgressBar progressBarMonster;
+        private Button btnBomb;
     }
 }

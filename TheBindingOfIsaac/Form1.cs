@@ -1,5 +1,6 @@
 using Library;
 using Library.Exceptions;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -7,9 +8,9 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 using static TheBindingOfIsaac.Form3;
 using Timer = System.Windows.Forms.Timer;
-
 
 namespace TheBindingOfIsaac
 {
@@ -30,14 +31,29 @@ namespace TheBindingOfIsaac
         private ProgressBar progressBarMonster;
         private Form characterStatsForm = null;
         private bool gameEnded = false;
+        private Label statsLabel;
+        private string heartsFolderPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\hearts";
+        private string pickupsFolderPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\pickups";
+        private IWavePlayer waveOutDevice;
+        private AudioFileReader audioFileReader;
+        private bool shopRoomGenerated = false;
+        private Item currentShopItem;
+        private bool shopRoomGeneratedOnCurrentFloor;
+        private bool chestOpened = false;
+        private bool itemTaken = false;
+
+
         public Form1(Character selectedCharacter, Menu menu)
         {
             InitializeComponent();
             this.KeyPreview = true;
+            this.Text = "The Binding Of Isaac";
             random = new Random();
             character = selectedCharacter;
             menuForm = menu;
             InitializeGame();
+            InitializeStatsLabel();
+            UpdateStatsLabel();
         }
 
         private void InitializeGame()
@@ -49,16 +65,132 @@ namespace TheBindingOfIsaac
             InitializePictureBox(character);
             InitializeAvailableItems();
             GenerateRooms();
+            ShowNavigator();
+            PlayMusicBasedOnFloorLevel(currentFloorLevel);
         }
+
+        private void ShowNavigator() {
+            Form floorNavigatorForm = new Form();
+            PictureBox floorNavigatorImage = new PictureBox();
+
+            floorNavigatorImage.Image = Image.FromFile($@"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\currentFloorLevel\floor_navigator_1.png");
+            floorNavigatorImage.SizeMode = PictureBoxSizeMode.AutoSize;
+            floorNavigatorForm.Size = new Size(floorNavigatorImage.Image.Width, floorNavigatorImage.Image.Height + 38);
+            floorNavigatorImage.Location = new Point(0, 0);
+            floorNavigatorForm.Controls.Add(floorNavigatorImage);
+            floorNavigatorForm.StartPosition = FormStartPosition.CenterScreen;
+            floorNavigatorForm.TopMost = true;
+            floorNavigatorForm.Show();
+
+            Timer timer = new Timer();
+            timer.Interval = 2000;
+            timer.Tick += (s, args) =>
+            {
+                timer.Stop();
+                floorNavigatorForm.Close();
+            };
+            timer.Start();
+        }
+        private void InitializeStatsLabel()
+        {
+            statsLabel = new Label();
+            statsLabel.Location = new Point(10, 50);
+            statsLabel.AutoSize = true;
+            this.Controls.Add(statsLabel);
+        }
+        private void UpdateStatsLabel()
+        {
+            foreach (Control control in this.Controls.OfType<PictureBox>().ToList())
+            {
+                if (control.Tag?.ToString() == "heart" || control.Tag?.ToString() == "pickup" || control.Tag?.ToString() == "item")
+                {
+                    this.Controls.Remove(control);
+                    control.Dispose();
+                }
+            }
+
+            int maxHealth = character.MaxHealth;
+            int numFullHearts = character.CurrentHealth / 20;
+            int remainderHealth = character.CurrentHealth % 20;
+
+            int startX = 10;
+            int startY = 10;
+            int heartWidth = 40;
+            int heartHeight = 40;
+
+            for (int i = 0; i < maxHealth / 20; i++)
+            {
+                PictureBox heart = new PictureBox();
+                heart.SizeMode = PictureBoxSizeMode.Zoom;
+                heart.Size = new Size(heartWidth, heartHeight);
+                heart.Location = new Point(startX + i * (heartWidth + 5), startY);
+                heart.Tag = "heart";
+
+                if (i < numFullHearts)
+                {
+                    heart.Image = Image.FromFile(Path.Combine(heartsFolderPath, "heart_full.png"));
+                }
+                else if (i == numFullHearts && remainderHealth >= 10)
+                {
+                    heart.Image = Image.FromFile(Path.Combine(heartsFolderPath, "heart_half.png"));
+                }
+                else
+                {
+                    heart.Image = Image.FromFile(Path.Combine(heartsFolderPath, "heart_empty.png"));
+                }
+
+                this.Controls.Add(heart);
+            }
+
+            PictureBox itemPictureBox = new PictureBox();
+            itemPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            itemPictureBox.Size = new Size(50, 50);
+            itemPictureBox.Location = new Point(10, 200);
+            itemPictureBox.Tag = "item";
+
+            switch (character.ActiveItemName)
+            {
+                case "Yum Heart":
+                    itemPictureBox.Image = Image.FromFile(@"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\items\spacebar\Yum_Heart.png");
+                    break;
+                case "The Book Of Belial":
+                    itemPictureBox.Image = Image.FromFile(@"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\items\spacebar\The_Book_Of_Belial.png");
+                    break;
+                case "Wooden Nickel":
+                    itemPictureBox.Image = Image.FromFile(@"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\items\spacebar\Wooden_Nickel.png");
+                    break;
+            }
+
+            this.Controls.Add(itemPictureBox);
+
+            statsLabel.Text = $"Strength: {character.Strength}\n" +
+                             $"Attack Speed: {character.AttackSpeed}\n" +
+                             $"Movement: {character.MovementSpeed}\n" +
+                             $"Luck: {character.Luck}\n" +
+                             $"HP: {character.CurrentHealth}/{character.MaxHealth}\n" +
+                             $"Coins: {character.Coins}\n" +
+                             $"Bombs: {character.Bombs}\n" +
+                             $"Keys: {character.Keys}\n" +
+                             $"Active Item Charges: {character.ActiveItemCharges}/{character.MaxActiveItemCharges}";
+        }
+
         private void Form1_Load(object sender, EventArgs e) { }
         private void InitializeAvailableItems()
         {
             availableItems = new List<Item>(Item.AllItems);
         }
+
         private void SetAllowedRoomCount()
         {
-            allowedRoomCount = currentFloorLevel == 1 ? 10 : currentFloorLevel == 2 ? 15 : 20;
+            allowedRoomCount = currentFloorLevel switch
+            {
+                1 => 10,
+                2 => 15,
+                3 => 20,
+                4 => 25,
+            };
         }
+
         private void InitializePictureBox(Character character)
         {
             if (pictureBox1 != null)
@@ -87,14 +219,23 @@ namespace TheBindingOfIsaac
             startPanel.Size = new Size(100, 100);
             startPanel.Location = new Point((this.ClientSize.Width - startPanel.Width) / 2, (this.ClientSize.Height - startPanel.Height) / 2);
             startPanel.BorderStyle = BorderStyle.FixedSingle;
+            startPanel.BackColor = Color.LightGreen;
             this.Controls.Add(startPanel);
 
             totalRoomsGenerated = 1;
-            paintedRoomIndex = random.Next(1, allowedRoomCount - 1);
-            GenerateAdjacentRooms(startPanel);
+            shopRoomGeneratedOnCurrentFloor = false;
+            bool yellowRoomGenerated = false;
+            GenerateAdjacentRooms(startPanel, ref yellowRoomGenerated);
+
+            if (!yellowRoomGenerated)
+            {
+                paintedRoomIndex = totalRoomsGenerated;
+                GenerateAdjacentRooms(startPanel, ref yellowRoomGenerated);
+            }
         }
 
-        private void GenerateAdjacentRooms(Panel panel)
+
+        private void GenerateAdjacentRooms(Panel panel, ref bool yellowRoomGenerated)
         {
             List<string> edges = new List<string>() { "Right", "Bottom", "Left", "Top" };
             Shuffle(edges);
@@ -145,6 +286,20 @@ namespace TheBindingOfIsaac
                 {
                     roomPanel.BackColor = Color.Yellow;
                     GenerateElement(roomPanel, "Item");
+                    yellowRoomGenerated = true;
+                }
+                else if (currentFloorLevel > 1 && !shopRoomGeneratedOnCurrentFloor && totalRoomsGenerated != 1 && totalRoomsGenerated != allowedRoomCount && roomPanel.BackColor != Color.Yellow)
+                {
+                    if (CanGenerateShopRoom(roomPanel))
+                    {
+                        roomPanel.BackColor = ColorTranslator.FromHtml("#D2B48C");
+                        GenerateElement(roomPanel, "Shop");
+                        shopRoomGeneratedOnCurrentFloor = true;
+                    }
+                    else
+                    {
+                        GenerateElement(roomPanel, "Monster");
+                    }
                 }
                 else if (totalRoomsGenerated == allowedRoomCount)
                 {
@@ -157,8 +312,12 @@ namespace TheBindingOfIsaac
                 }
 
                 furthestPanelFromStart = roomPanel;
-                GenerateAdjacentRooms(roomPanel);
+                GenerateAdjacentRooms(roomPanel, ref yellowRoomGenerated);
             }
+        }
+        private bool CanGenerateShopRoom(Panel roomPanel)
+        {
+            return roomPanel.BackColor != Color.Yellow && totalRoomsGenerated != 1 && totalRoomsGenerated != allowedRoomCount;
         }
         private void GenerateElement(Panel roomPanel, string elementType)
         {
@@ -177,11 +336,15 @@ namespace TheBindingOfIsaac
                     Console.WriteLine(ex.ToString());
                     Console.ResetColor();
                 }
-
             }
             else if (elementType == "Boss")
             {
                 GenerateBoss(roomPanel);
+            }
+            else if (elementType == "Shop" && currentFloorLevel > 1)
+            {
+                GenerateShopItem();
+                roomPanel.BackColor = ColorTranslator.FromHtml("#D2B48C");
             }
         }
 
@@ -226,6 +389,10 @@ namespace TheBindingOfIsaac
             {
                 SetElementImage(roomPanel, boss.Name, @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\bosses\third_floor", new Size(100, 100));
             }
+            else if (currentFloorLevel == 4)
+            {
+                SetElementImage(roomPanel, boss.Name, @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\bosses\fourth_floor", new Size(100, 100));
+            }
         }
 
         private void GenerateItem(Panel roomPanel)
@@ -244,6 +411,19 @@ namespace TheBindingOfIsaac
             }
         }
 
+        private void GenerateShopItem()
+        {
+            if (currentFloorLevel > 1)
+            {
+                currentShopItem = Item.AllShopItems[new Random().Next(Item.AllShopItems.Count)];
+            }
+            else
+            {
+                currentShopItem = null;
+            }
+        }
+
+
         private void GenerateMonster(Panel roomPanel)
         {
             List<Monster> validMonsters = Monster.AllMonsters.Where(m => m.Depth == currentFloorLevel).ToList();
@@ -261,6 +441,10 @@ namespace TheBindingOfIsaac
             else if (currentFloorLevel == 3)
             {
                 SetElementImage(roomPanel, monster.Name, @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\monsters\third_floor", new Size(100, 100));
+            }
+            else if (currentFloorLevel == 4)
+            {
+                SetElementImage(roomPanel, monster.Name, @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\monsters\fourth_floor", new Size(100, 100));
             }
         }
 
@@ -310,9 +494,8 @@ namespace TheBindingOfIsaac
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode != Keys.Up && e.KeyCode != Keys.Down && e.KeyCode != Keys.Left && e.KeyCode != Keys.Right && e.KeyCode != Keys.Tab && e.KeyCode != Keys.Enter)
+            if (e.KeyCode != Keys.Up && e.KeyCode != Keys.Down && e.KeyCode != Keys.Left && e.KeyCode != Keys.Right && e.KeyCode != Keys.Enter && e.KeyCode != Keys.Space)
                 return;
-
 
             int step = 100;
             Point currentPosition = pictureBox1.Location;
@@ -322,27 +505,37 @@ namespace TheBindingOfIsaac
             {
                 case Keys.Right:
                     newPosition.X += step;
+                    UpdateStatsLabel();
+                    startPanel.BackColor = Color.White;
                     break;
                 case Keys.Left:
                     newPosition.X -= step;
+                    UpdateStatsLabel();
+                    startPanel.BackColor = Color.White;
                     break;
                 case Keys.Down:
                     newPosition.Y += step;
+                    UpdateStatsLabel();
+                    startPanel.BackColor = Color.White;
                     break;
                 case Keys.Up:
                     newPosition.Y -= step;
+                    UpdateStatsLabel();
+                    startPanel.BackColor = Color.White;
                     break;
-                case Keys.Tab:
-                    ShowCharacterStats();
+                case Keys.Space:
+                    character.UseActiveItem();
+                    UpdateStatsLabel();
                     return;
                 case Keys.Enter:
+                    UpdateStatsLabel();
                     Panel currentPanel = GetCurrentPanel(currentPosition);
                     if (currentPanel != null)
                     {
                         Console.WriteLine($"Current panel color: {currentPanel.BackColor}");
                         if (currentPanel.BackColor == ColorTranslator.FromHtml("#fffffd"))
                         {
-                            if (currentFloorLevel == 3)
+                            if (currentFloorLevel == 4)
                             {
                                 Form winForm = new Form();
                                 Image img = Image.FromFile(@"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\win.png");
@@ -370,9 +563,16 @@ namespace TheBindingOfIsaac
 
                             else
                             {
+                                if (waveOutDevice != null)
+                                {
+                                    waveOutDevice.Stop();
+                                    waveOutDevice.Dispose();
+                                    waveOutDevice = null;
+                                }
+                                PlayMusicBasedOnFloorLevel(currentFloorLevel + 1);
                                 Form floorNavigatorForm = new Form();
                                 PictureBox floorNavigatorImage = new PictureBox();
-
+                                ResetShopState();
                                 floorNavigatorImage.Image = Image.FromFile($@"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\currentFloorLevel\floor_navigator_{currentFloorLevel + 1}.png");
                                 floorNavigatorImage.SizeMode = PictureBoxSizeMode.AutoSize;
                                 floorNavigatorForm.Size = new Size(floorNavigatorImage.Image.Width, floorNavigatorImage.Image.Height + 38);
@@ -382,7 +582,7 @@ namespace TheBindingOfIsaac
                                 floorNavigatorForm.Show();
 
                                 Timer timer = new Timer();
-                                timer.Interval = 3000;
+                                timer.Interval = 2000;
                                 timer.Tick += (s, args) =>
                                 {
                                     timer.Stop();
@@ -404,6 +604,10 @@ namespace TheBindingOfIsaac
                                     }
                                 };
                                 timer.Start();
+                            }
+                            if (waveOutDevice == null)
+                            {
+                                waveOutDevice = new WaveOut();
                             }
                         }
                     }
@@ -445,8 +649,10 @@ namespace TheBindingOfIsaac
                 {
                     string itemsFolderPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\items";
                     Form3 form3 = new Form3(item, character, itemsFolderPath);
+                    form3.StartPosition = FormStartPosition.CenterScreen;
                     form3.FormClosedEvent += (s, args) =>
                     {
+                        UpdateStatsLabel();
                         var eventArgs = args as ItemTakenEventArgs;
                         if (eventArgs != null && eventArgs.ItemTaken)
                         {
@@ -461,10 +667,26 @@ namespace TheBindingOfIsaac
                     };
                     form3.Show();
                 }
+                CheckShopRoom();
             }
         }
         private void ShowEndingAndRestart()
         {
+            foreach (Control control in this.Controls)
+            {
+                if (control is Panel panel && panel.BackColor == ColorTranslator.FromHtml("#D2B48C"))
+                {
+                    foreach (Control panelControl in panel.Controls)
+                    {
+                        if (panelControl is PictureBox)
+                        {
+                            panelControl.Visible = true;
+                            panelControl.Enabled = true;
+                        }
+                    }
+                }
+            }
+
             if (gameEnded) { return; }
 
             gameEnded = true;
@@ -472,11 +694,14 @@ namespace TheBindingOfIsaac
             this.Invoke((MethodInvoker)delegate
             {
                 this.Hide();
-                menuForm.OnGameEnded(true);
+                menuForm.OnGameEnded(true, character);
                 menuForm.Show();
                 this.Close();
+                this.Dispose();
+                Application.Restart();
             });
         }
+
 
 
         private void StartCombat(Panel roomPanel)
@@ -495,17 +720,19 @@ namespace TheBindingOfIsaac
                         if (control is PictureBox)
                         {
                             roomPanel.Controls.Remove(control);
+                            character.IncrementActiveItemCharges();
                         }
                     }
 
                     Form2 form2 = new Form2(character, monster, characterImagePath, monsterImagePath, menuForm);
+                    form2.StartPosition = FormStartPosition.CenterScreen;
                     form2.ShowDialog();
 
                     if (roomPanel.BackColor == Color.Red)
                     {
                         PictureBox endingChestPicture = new PictureBox
                         {
-                            Image = Image.FromFile(currentFloorLevel == 3
+                            Image = Image.FromFile(currentFloorLevel == 4
                                 ? @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\ending_chest.png"
                                 : @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\trapdoor.png"),
                             SizeMode = PictureBoxSizeMode.Zoom,
@@ -515,6 +742,7 @@ namespace TheBindingOfIsaac
                         roomPanel.Controls.Add(endingChestPicture);
                         roomPanel.BackColor = ColorTranslator.FromHtml("#fffffd");
                     }
+                    UpdateStatsLabel();
                 }
                 else
                 {
@@ -554,6 +782,10 @@ namespace TheBindingOfIsaac
                 {
                     return @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\bosses\third_floor\" + monster.Name + ".png";
                 }
+                if (currentFloorLevel == 4)
+                {
+                    return @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\bosses\fourth_floor\" + monster.Name + ".png";
+                }
             }
             else
             {
@@ -568,6 +800,10 @@ namespace TheBindingOfIsaac
                 if (currentFloorLevel == 3)
                 {
                     return @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\monsters\third_floor\" + monster.Name + ".png";
+                }
+                if (currentFloorLevel == 4)
+                {
+                    return @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\monsters\fourth_floor\" + monster.Name + ".png";
                 }
             }
             return @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\default.png";
@@ -650,46 +886,69 @@ namespace TheBindingOfIsaac
             }
             return null;
         }
-        private void ShowCharacterStats()
+        private void CheckShopRoom()
         {
-            if (characterStatsForm != null && !characterStatsForm.IsDisposed)
-                return;
-
-            characterStatsForm = new Form();
-            characterStatsForm.Text = "Character Stats";
-
-            int yOffset = 10;
-            AddStatLabel("Name: " + character.Name, 10, yOffset, characterStatsForm);
-            AddStatLabel("Strength: " + character.Strength, 10, yOffset += 25, characterStatsForm);
-            AddStatLabel("Attack Speed: " + character.AttackSpeed, 10, yOffset += 25, characterStatsForm);
-            AddStatLabel("Movement: " + character.MovementSpeed, 10, yOffset += 25, characterStatsForm);
-            AddStatLabel("Luck: " + character.Luck, 10, yOffset += 25, characterStatsForm);
-            AddStatLabel("HP: " + character.CurrentHealth + "/" + character.MaxHealth, 10, yOffset += 25, characterStatsForm);
-            AddStatLabel("Coins: " + character.Coins, 10, yOffset += 25, characterStatsForm);
-            AddStatLabel("Bombs: " + character.Bombs, 10, yOffset += 25, characterStatsForm);
-            AddStatLabel("Keys: " + character.Keys, 10, yOffset += 25, characterStatsForm);
-
-            characterStatsForm.StartPosition = FormStartPosition.CenterScreen;
-            characterStatsForm.FormClosed += (sender, e) => characterStatsForm = null;
-            characterStatsForm.Show();
-        }
-
-
-        private void AddStatLabel(string text, int x, int y, Form form)
-        {
-            Label label = new Label();
-            label.Text = text;
-            label.Location = new Point(x, y);
-            form.Controls.Add(label);
-        }
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            if (keyData == Keys.Tab)
+            Panel currentPanel = GetCurrentPanel(pictureBox1.Location);
+            if (currentPanel != null && currentPanel.BackColor == ColorTranslator.FromHtml("#D2B48C"))
             {
-                ShowCharacterStats();
-                return true;
+                ShowForm4();
             }
-            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void ShowForm4()
+        {
+            Form4 form4 = new Form4(currentShopItem, character, UpdateStatsLabel, chestOpened, itemTaken);
+            this.Text = "Shop";
+            form4.StartPosition = FormStartPosition.CenterScreen;
+            form4.ShowDialog();
+
+            chestOpened = form4.ChestOpened;
+            itemTaken = form4.ItemTaken;
+        }
+        private void ResetShopState()
+        {
+            chestOpened = false;
+            itemTaken = false;
+            currentShopItem = Item.AllShopItems[new Random().Next(Item.AllShopItems.Count)];
+        }
+
+        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UpdateStatsLabel();
+        }
+
+        private void PlayMusicBasedOnFloorLevel(int floorLevel)
+        {
+            string musicPath = "";
+            switch (floorLevel)
+            {
+                case 1:
+                    musicPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\soundtrack\floor_1.mp3";
+                    break;
+                case 2:
+                    musicPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\soundtrack\floor_2.mp3";
+                    break;
+                case 3:
+                    musicPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\soundtrack\floor_3.mp3";
+                    break;
+                case 4:
+                    musicPath = @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\soundtrack\floor_4.mp3";
+                    break;
+            }
+
+            if (waveOutDevice != null)
+            {
+                waveOutDevice.Stop();
+            }
+            else
+            {
+                waveOutDevice = new WaveOut();
+            }
+
+            audioFileReader = new AudioFileReader(musicPath);
+            audioFileReader.Volume = 0.5f;
+            waveOutDevice.Init(audioFileReader);
+            waveOutDevice.Play();
         }
 
     }

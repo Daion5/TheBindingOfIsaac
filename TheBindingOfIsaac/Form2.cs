@@ -22,12 +22,16 @@ namespace TheBindingOfIsaac
 
             base.WndProc(ref m);
         }
+
         private Character character;
         private Monster monster;
         private Menu menuForm;
         private string characterImageFile;
         private string monsterImageFile;
         private bool gameEnded = false;
+        private bool isBombUsed = false;
+        private bool isBombButtonLocked = false;
+
         public Form2(Character character, Monster monster, string characterImageFile, string monsterImageFile, Menu menuForm)
         {
             InitializeComponent();
@@ -36,6 +40,7 @@ namespace TheBindingOfIsaac
             this.characterImageFile = characterImageFile;
             this.monsterImageFile = monsterImageFile;
             this.menuForm = menuForm;
+            this.Text = "Battle Room";
 
             pictureBoxCharacter.Image = Image.FromFile(characterImageFile);
             pictureBoxCharacter.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -50,6 +55,9 @@ namespace TheBindingOfIsaac
             progressBarMonster.Value = Math.Min(monster.CurrentHealth, progressBarMonster.Maximum);
 
             btnFight.Click += button1_Click;
+            btnBomb.Click += btnBomb_Click;
+
+            UpdateBombButton();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,26 +83,45 @@ namespace TheBindingOfIsaac
             else
             {
                 gameEnded = true;
-                this.Close();
+                WinBattle();
+            }
 
-                var dropResult = character.DropRate();
-                switch (dropResult)
+            isBombUsed = false;
+        }
+
+        private void btnBomb_Click(object sender, EventArgs e)
+        {
+            if (!isBombButtonLocked && character.Bombs > 0 && monster.IsAlive())
+            {
+                isBombButtonLocked = true;
+
+                character.Bombs--;
+                monster.TakeDamageBomb(character.BombDamage);
+                UpdateHealthBars();
+                UpdateBombButton();
+
+                if (!monster.IsAlive())
                 {
-                    case DropResult.DoubleHeart:
-                        character.Heal(20);
-                        UpdateHealthBars();
-                        MessageBox.Show("YOU FOUND A DOUBLE HEART!");
-                        break;
-                    case DropResult.SingleHeart:
-                        character.Heal(10);
-                        UpdateHealthBars();
-                        MessageBox.Show("YOU FOUND A HEART!");
-                        break;
-                    case DropResult.NoHeart:
-                        break;
+                    gameEnded = true;
+                    WinBattle();
                 }
 
+                Timer timer = new Timer();
+                timer.Interval = 500;
+                timer.Tick += (s, args) =>
+                {
+                    isBombButtonLocked = false;
+                    timer.Stop();
+                };
+                timer.Start();
             }
+        }
+
+
+        private void UpdateBombButton()
+        {
+            btnBomb.Text = $"Bomb: {character.Bombs}";
+            btnBomb.Enabled = character.Bombs > 0;
         }
 
         private void ShowLoseForm()
@@ -147,19 +174,64 @@ namespace TheBindingOfIsaac
             {
                 menuForm.Invoke(new Action(() =>
                 {
-                    menuForm.OnGameEnded(false);
+                    menuForm.OnGameEnded(false, character);
                     menuForm.Show();
                     menuForm.BringToFront();
                 }));
             }
             else
             {
-                menuForm.OnGameEnded(false);
+                menuForm.OnGameEnded(false, character);
                 menuForm.Show();
                 menuForm.BringToFront();
             }
         }
 
+        private void WinBattle()
+        {
+            this.Close();
+
+            var dropHeartResult = character.HeartDropRate();
+            switch (dropHeartResult)
+            {
+                case DropHeartResult.DoubleHeart:
+                    character.Heal(20);
+                    UpdateHealthBars();
+                    CustomMessageBox.Show("YOU FOUND A DOUBLE HEART!", @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\hearts\hearts_drops\double_heart.png");
+                    break;
+                case DropHeartResult.SingleHeart:
+                    character.Heal(10);
+                    UpdateHealthBars();
+                    CustomMessageBox.Show("YOU FOUND A HEART!", @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\hearts\hearts_drops\heart.png");
+                    break;
+                case DropHeartResult.HalfHeart:
+                    character.Heal(5);
+                    UpdateHealthBars();
+                    CustomMessageBox.Show("YOU FOUND A HALF OF HEART!", @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\hearts\hearts_drops\half_heart.png");
+                    break;
+                case DropHeartResult.NoHeart:
+                    break;
+            }
+
+            var dropResult = character.DropRate();
+            switch (dropResult)
+            {
+                case DropResult.Coin:
+                    character.Coins++;
+                    CustomMessageBox.Show("YOU FOUND A PENNY!", @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\pickups\penny.png");
+                    break;
+                case DropResult.Bomb:
+                    character.Bombs++;
+                    CustomMessageBox.Show("YOU FOUND A BOMB!", @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\pickups\bomb.png");
+                    break;
+                case DropResult.Key:
+                    character.Keys++;
+                    CustomMessageBox.Show("YOU FOUND A KEY!", @"C:\Users\Daion\Desktop\PZ\TBOI\TheBindingOfIsaac\images\assets\pickups\key.png");
+                    break;
+                case DropResult.Nothing:
+                    break;
+            }
+        }
 
         private void UpdateHealthBars()
         {
@@ -181,9 +253,6 @@ namespace TheBindingOfIsaac
                 progressBarMonster.Value = Math.Min(Math.Max(monster.CurrentHealth, progressBarMonster.Minimum), progressBarMonster.Maximum);
             }
         }
-
-
-
 
         private void Form2_Load(object sender, EventArgs e)
         {
